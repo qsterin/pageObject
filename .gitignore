@@ -4,7 +4,7 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**
 !**/src/test/**
-!**/artifacts/**
+!/artifacts/app-ibank-build-for-testers.jar
 
 ### STS ###
 .apt_generated
