@@ -2,7 +2,6 @@ HELP.md
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
-!artifacts/app-ibank-build-for-testers.jar
 !**/src/main/**
 !**/src/test/**
 
