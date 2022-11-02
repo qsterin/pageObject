@@ -33,6 +33,6 @@ public class TransferPage {
     }
 
     public static void findErrorMessage(String expectedText) {
-        errorMessage.shouldHave(exactText(expectedText), Duration.ofSeconds(15)).shouldBe(visible);
+        errorMessage.shouldHave(exactText(expectedText), Duration.ofSeconds(5)).shouldBe(visible);
     }
 }

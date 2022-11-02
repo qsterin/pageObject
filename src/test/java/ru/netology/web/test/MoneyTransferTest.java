@@ -46,11 +46,15 @@ class MoneyTransferTest {
         var firstCardBalance = dashboardPage.getCardBalance(firstCardInfo);
         var secondCardBalance = dashboardPage.getCardBalance(secondCardInfo);
         var amount = generateValidAmount(firstCardBalance);
-        var expectedBalanceFirstCard = firstCardBalance - (firstCardBalance + 1);
-        var expectedBalanceSecondCard = secondCardBalance + (firstCardBalance + 1);
+        //var expectedBalanceFirstCard = firstCardBalance - (firstCardBalance + 1);
+        //var expectedBalanceSecondCard = secondCardBalance + (firstCardBalance + 1);
         var transferPage = dashboardPage.selectCardToTransfer(secondCardInfo);
         dashboardPage = transferPage.makeValidTransfer(String.valueOf(firstCardBalance + 1), firstCardInfo);
         TransferPage.findErrorMessage("Ошибка!");
+        var actualBalanceFirstCard = dashboardPage.getCardBalance(firstCardInfo);
+        var actualBalanceSecondCard = dashboardPage.getCardBalance(secondCardInfo);
+        assertEquals(firstCardBalance, actualBalanceFirstCard);
+        assertEquals(secondCardBalance, actualBalanceSecondCard);
     }
 
 
